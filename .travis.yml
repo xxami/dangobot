@@ -8,4 +8,4 @@ install:
 
 script:
   - xbuild /p:Configuration=Release dangobot.sln
-  - mono ./testrunner/NUnit.Runners.3.4.1/tools/nunit-console.exe ./dangobot.tests/bin/Release/dangobot.tests.dll
+  - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./dangobot.tests/bin/Release/dangobot.tests.dll
