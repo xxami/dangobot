@@ -7,5 +7,11 @@ install:
   - nuget install NUnit.Runners -Version 3.4.1 -OutputDirectory testrunner
 
 script:
+  - git clone http://github.com/NLua/KeraLua.git
+  - cd KeraLua
+  - ./run_all.linux64.sh
+  - cd ..
   - xbuild /p:Configuration=Release dangobot.sln
+  - cp KeraLua/src/bin/Release/net45/KeraLua.dll dangobot/bin/Release/KeraLua.dll
+  - cp KeraLua/src/bin/Release/net45/KeraLua.dll dangobot.tests/bin/Release/KeraLua.dll
   - mono ./testrunner/NUnit.ConsoleRunner.3.4.1/tools/nunit3-console.exe ./dangobot.tests/bin/Release/dangobot.tests.dll
