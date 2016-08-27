@@ -1,5 +1,6 @@
 ﻿
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using dangobot.Configuration;
 using NUnit.Framework;
@@ -19,10 +20,13 @@ namespace dangobot.tests.Configuration
         [Test]
         public void LoadsCompleteConfigurationFile()
         {
-            var tomlPath = SourceFromTestCases("Complete.toml");
-            DangobotConfiguration.Read(tomlPath);
+            var tomlData = SourceFromTestCases("Complete.toml");
+            DangobotConfiguration.Read(tomlData);
             var config = DangobotConfiguration.Items;
-            Assert.That(config.Slack.ApiKey, Is.EqualTo("*insert token here*"));
+            Assert.That(config.Slack.ApiKey, Is.EqualTo("*insert key here*"));
+            Assert.That(config.Slack.Channels.Count, Is.EqualTo(2));
+            Assert.That(config.Slack.Channels[0], Is.EqualTo("#general"));
+            Assert.That(config.Slack.Channels[1], Is.EqualTo("#random"));
         }
     }
 }

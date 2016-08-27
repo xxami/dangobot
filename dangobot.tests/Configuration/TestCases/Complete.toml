@@ -1,4 +1,4 @@
 ﻿
 [Slack]
-ApiToken = "*insert token here*"
+ApiKey = "*insert key here*"
 Channels = ["#general", "#random"]
