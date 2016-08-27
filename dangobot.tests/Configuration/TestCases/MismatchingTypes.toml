@@ -1,0 +1,4 @@
+﻿
+[Slack]
+ApiKey = "*insert key here*"
+Channels = ["#general", 1]

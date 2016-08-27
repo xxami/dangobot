@@ -64,6 +64,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Configuration\TestCases\Complete.toml" />
+    <EmbeddedResource Include="Configuration\TestCases\Partial.toml" />
+    <EmbeddedResource Include="Configuration\TestCases\UnknownValues.toml" />
+    <EmbeddedResource Include="Configuration\TestCases\MismatchingTypes.toml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
