@@ -58,10 +58,12 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="Configuration\DangobotConfigurationTests.cs" />
     <Compile Include="LuaTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Configuration\TestCases\Complete.toml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

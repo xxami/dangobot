@@ -1,0 +1,4 @@
+﻿
+[Slack]
+ApiToken = "*insert token here*"
+Channels = ["#general", "#random"]
