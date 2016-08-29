@@ -8,17 +8,18 @@ using System.Threading.Tasks;
 
 namespace dangobot.Net.Http
 {
-    interface IRpcClient
+    public interface IRpcClient
     {
         string Call(string method, string jsonArguments);
     }
 
     public class BasicRpcClient
     {
+        public IHttpClient HttpClient { get; set; }
+
         public string Call(string methodUrl, string jsonArguments)
         {
-            using (var web = new WebClient())
-                return web.UploadString(methodUrl, "POST", jsonArguments);
+            return HttpClient.Post(methodUrl, jsonArguments);
         }
     }
 }

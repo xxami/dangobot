@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace dangobot.Net.Http
 {
-    interface IHttpClient
+    public interface IHttpClient
     {
         string Post(string url, string postData);
     }
