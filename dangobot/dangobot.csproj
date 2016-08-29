@@ -60,6 +60,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\DangobotConfiguration.cs" />
+    <Compile Include="Net\Slack\RpcClient.cs" />
+    <Compile Include="Net\Slack\RtmClient.cs" />
+    <Compile Include="Net\Slack\RpcMethods\RtmStart.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
