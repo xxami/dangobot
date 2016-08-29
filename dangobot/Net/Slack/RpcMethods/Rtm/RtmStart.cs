@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dangobot.Net.Slack.RpcMethods
+namespace dangobot.Net.Slack.RpcMethods.Rtm
 {
     public class RtmStart
     {

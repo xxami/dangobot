@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dangobot.Net.Slack
+namespace dangobot.Net.Http
 {
     interface IRpcClient
     {
