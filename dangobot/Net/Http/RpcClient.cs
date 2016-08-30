@@ -15,7 +15,12 @@ namespace dangobot.Net.Http
 
     public class BasicRpcClient
     {
-        public IHttpClient HttpClient { get; set; }
+        public IHttpClient HttpClient { get; private set; }
+
+        public BasicRpcClient(IHttpClient httpClient)
+        {
+            HttpClient = httpClient;
+        }
 
         public string Call(string methodUrl, string jsonArguments)
         {
