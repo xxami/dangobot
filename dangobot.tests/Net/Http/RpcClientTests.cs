@@ -18,7 +18,7 @@ namespace dangobot.tests.Net.Http
             mock.Setup(client => client.Post(methodUrl, jsonArguments))
                 .Returns("success");
 
-            var rpcClient = new BasicRpcClient(mock.Object);
+            var rpcClient = new JsonRpcClient(mock.Object);
 
             var response = rpcClient.Call(methodUrl, jsonArguments);
             Assert.That(response, Is.EqualTo("success"));
