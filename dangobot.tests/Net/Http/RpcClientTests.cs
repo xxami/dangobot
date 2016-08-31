@@ -1,5 +1,6 @@
 ﻿
 using dangobot.Net.Http;
+using dangobot.Net.Slack;
 using Moq;
 using NUnit.Framework;
 

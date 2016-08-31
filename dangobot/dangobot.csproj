@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Configuration\DangobotConfiguration.cs" />
     <Compile Include="Net\Http\HttpClient.cs" />
-    <Compile Include="Net\Http\RpcClient.cs" />
+    <Compile Include="Net\Slack\RpcClient.cs" />
     <Compile Include="Net\Slack\RtmClient.cs" />
     <Compile Include="Net\Slack\RpcMethods\Rtm\RtmStart.cs" />
     <Compile Include="Program.cs" />
