@@ -4,13 +4,17 @@ using Newtonsoft.Json;
 
 namespace dangobot.Net.Slack
 {
-    public interface IRpcClient<in TRpcArguments, out TRpcResponseModel>
+    public interface IRpcMethod
     {
-        TRpcResponseModel Call(string method, TRpcArguments args);
+        
     }
 
-    public class JsonRpcClient<TRpcArguments, TRpcResponseModel>
-        : IRpcClient<TRpcArguments, TRpcResponseModel>
+    public interface IRpcClient
+    {
+        T Call<T>(T method) where T: IRpcClient;
+    }
+
+    public class JsonRpcClient : IRpcClient
     {
         public IHttpClient HttpClient { get; private set; }
 
@@ -19,7 +23,7 @@ namespace dangobot.Net.Slack
             HttpClient = httpClient;
         }
 
-        public TRpcResponseModel Call(string methodUrl, TRpcArguments args)
+        public T Call<T>(T method) where T: IRpcClient
         {
             var jsonArgs = JsonConvert.SerializeObject(args);
             var result = HttpClient.Post(methodUrl, jsonArgs);
