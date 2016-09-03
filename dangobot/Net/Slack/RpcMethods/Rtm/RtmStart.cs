@@ -14,7 +14,7 @@ namespace dangobot.Net.Slack.RpcMethods.Rtm
             public string ApiToken { get; set; }
         }
 
-        private Arguments _arguments;
+        private readonly Arguments _arguments;
 
         public RtmStart(string apiToken)
         {
@@ -24,5 +24,14 @@ namespace dangobot.Net.Slack.RpcMethods.Rtm
             };
         }
 
+        public object GetArguments()
+        {
+            return _arguments;
+        }
+
+        public Type GetResponseModel()
+        {
+            return typeof(int);
+        }
     }
 }
