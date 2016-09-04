@@ -27,9 +27,10 @@ namespace dangobot.Net.Slack
 
         public object Call<T>(T method) where T: IRpcMethod
         {
-            var jsonArgs = JsonConvert.SerializeObject(args);
-            var result = HttpClient.Post(methodUrl, jsonArgs);
-            return JsonConvert.DeserializeObject<TRpcResponseModel>(result);
+            //var jsonArgs = JsonConvert.SerializeObject(args);
+            //var result = HttpClient.Post(methodUrl, jsonArgs);
+            //return JsonConvert.DeserializeObject<TRpcResponseModel>(result);
+            return null;
         }
     }
 }

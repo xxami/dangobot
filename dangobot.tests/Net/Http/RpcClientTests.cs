@@ -9,20 +9,20 @@ namespace dangobot.tests.Net.Http
     [TestFixture]
     public class RpcClientTests
     {
-        [Test]
-        public void MakesHttpPostRequest()
-        {
-            var methodUrl = "url";
-            var jsonArguments = "args";
+        //[Test]
+        //public void MakesHttpPostRequest()
+        //{
+        //    var methodUrl = "url";
+        //    var jsonArguments = "args";
 
-            var mock = new Mock<IHttpClient>();
-            mock.Setup(client => client.Post(methodUrl, jsonArguments))
-                .Returns("success");
+        //    var mock = new Mock<IHttpClient>();
+        //    mock.Setup(client => client.Post(methodUrl, jsonArguments))
+        //        .Returns("success");
 
-            var rpcClient = new JsonRpcClient(mock.Object);
+        //    var rpcClient = new JsonRpcClient(mock.Object);
 
-            var response = rpcClient.Call(methodUrl, jsonArguments);
-            Assert.That(response, Is.EqualTo("success"));
-        }
+        //    var response = rpcClient.Call(methodUrl, jsonArguments);
+        //    Assert.That(response, Is.EqualTo("success"));
+        //}
     }
 }
